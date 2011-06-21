@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recipe id="edu.berkeley.waverecipe.passthrough.AccelerometerPassThrough" version="2011-06-21 13:00:00.45-0800" >
+<recipe id="edu.berkeley.waverecipe.passthrough.AccelerometerPassThrough" version="2011-06-21 14:18:00.00-0700" >
     <name>Accelerometer Pass Through</name>
     <description>
         Passes through accelerometer data. For testing purposes, use with
