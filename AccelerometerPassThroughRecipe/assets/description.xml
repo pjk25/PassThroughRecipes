@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipe id="edu.berkeley.waverecipe.passthrough.AccelerometerPassThrough" version="2011-06-21 13:00:00.45-0800" >
+    <name>Accelerometer Pass Through</name>
+    <description>
+        Passes through accelerometer data. For testing purposes, use with
+        care.
+    </description>
+    <sensors>
+        <sensor type="accelerometer" units="-m/s^2" ref-id="input_accelerometer">
+            <channel name="x" />
+            <channel name="y" />
+            <channel name="z" />
+        </sensor>
+    </sensors>
+    <output name="Accelerometer" units="-m/s^2">
+        <channel name="x" />
+        <channel name="y" />
+        <channel name="z" />
+    </output>
+    <granularity-table type="discreet">
+        <entry>
+            <!-- rates are assumed to be in Hz, precision is in the unit of the referenced sensor-->
+            <input ref-id="input_accelerometer" rate="50" precision="0.010"/>
+            <output rate="50" precision="0.010" />
+        </entry>
+        <entry>
+            <input ref-id="input_accelerometer" rate="10" precision="0.010"/>
+            <output rate="10" precision="0.010" />
+        </entry>
+        <entry>
+            <input ref-id="input_accelerometer" rate="1" precision="0.001"/>
+            <output rate="1" precision="0.001" />
+        </entry>
+        <entry>
+            <input ref-id="input_accelerometer" rate="0.2" precision="0.100"/>
+            <output rate="0.2" precision="0.100" />
+        </entry>
+    </granularity-table>
+    <algorithm>
+        <class interface="WaveRecipeAlgorithm" name="edu.berkeley.waverecipe.passthrough.AccelerometerPassThroughAlgorithm" />
+    </algorithm>
+</recipe>
