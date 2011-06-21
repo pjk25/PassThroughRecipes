@@ -1,4 +1,4 @@
-package edu.berkeley.waverecipes.passthrough;
+package edu.berkeley.waverecipe.passthrough;
 
 import android.app.Activity;
 import android.os.Bundle;
