@@ -30,24 +30,7 @@ public class AccelerometerPassThroughAlgorithm implements WaveRecipeAlgorithm {
         return false;
     }
     
-    public void ingestSensorData(Object sensorData) {
-        try {
-            WaveSensorData theSensorData = new WaveSensorDataShadow(sensorData);
-            
-            double x = theSensorData.getChannelValue("x");
-            double y = theSensorData.getChannelValue("y");
-            double z = theSensorData.getChannelValue("z");
-            
-            long time = theSensorData.getTime();
-            
-            Map<String, Double> values = new HashMap<String, Double>(3);
-            values.put("x", x);
-            values.put("y", y);
-            values.put("z", z);
-            
-            theListener.handleRecipeData(time, values);
-        } catch (Exception e) {
-            Log.d(TAG, "Exception in ingestSensorData", e);
-        }
+    public void ingestSensorData(long time, Map<String, Double> values) {
+        theListener.handleRecipeData(time, values);
     }
 }
