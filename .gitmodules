@@ -1,3 +1,6 @@
 [submodule "AccelerometerPassThroughRecipe/src/edu/berkeley/androidwave/waverecipe/waverecipealgorithm"]
 	path = AccelerometerPassThroughRecipe/src/edu/berkeley/androidwave/waverecipe/waverecipealgorithm
 	url = git://github.com/pjk25/waverecipealgorithm.git
+[submodule "LocationPassThroughRecipe/src/edu/berkeley/androidwave/waverecipe/waverecipealgorithm"]
+	path = LocationPassThroughRecipe/src/edu/berkeley/androidwave/waverecipe/waverecipealgorithm
+	url = git://github.com/pjk25/waverecipealgorithm.git

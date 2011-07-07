@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipe id="edu.berkeley.waverecipe.passthrough.LocationPassThrough" version="2011-07-06 18:15:00.00-0700" >
+    <name>Location Pass Through</name>
+    <description>
+        Passes through location data. For testing purposes, use with care.
+    </description>
+    <sensors>
+        <sensor type="location" units="degrees" ref-id="input_location">
+            <channel name="altitude" />
+            <channel name="latitude" />
+            <channel name="longitude" />
+        </sensor>
+    </sensors>
+    <output name="Location" units="degrees">
+        <channel name="altitude" /><!-- altitude is actually reported in meters -->
+        <channel name="latitude" />
+        <channel name="longitude" />
+    </output>
+    <granularity-table type="discreet">
+        <entry>
+            <!-- rates are assumed to be in Hz, precision is in meters-->
+            <input ref-id="input_location" rate="2" precision="1.0"/>
+            <output rate="2" precision="1.0" />
+        </entry>
+        <entry>
+            <input ref-id="input_location" rate="1" precision="2.0"/>
+            <output rate="1" precision="2.0" />
+        </entry>
+        <entry>
+            <input ref-id="input_location" rate="0.1" precision="50.0"/>
+            <output rate="0.1" precision="50.0" />
+        </entry>
+        <entry>
+            <input ref-id="input_location" rate="0.2" precision="100.0"/>
+            <output rate="0.1666667" precision="100.0" />
+        </entry>
+    </granularity-table>
+    <algorithm>
+        <class interface="WaveRecipeAlgorithm" name="edu.berkeley.waverecipe.passthrough.LocationPassThroughAlgorithm" />
+    </algorithm>
+</recipe>
