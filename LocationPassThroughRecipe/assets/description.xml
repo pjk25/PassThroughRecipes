@@ -34,6 +34,6 @@
         </entry>
     </granularity-table>
     <algorithm>
-        <class interface="WaveRecipeAlgorithm" name="edu.berkeley.waverecipe.passthrough.LocationPassThroughAlgorithm" />
+        <class interface="WaveRecipeAlgorithm" name="edu.berkeley.waverecipe.passthrough.PassThroughAlgorithm" />
     </algorithm>
 </recipe>

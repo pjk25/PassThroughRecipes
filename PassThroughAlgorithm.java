@@ -1,8 +1,8 @@
 // 
-//  AccelerometerPassThroughAlgorithm.java
+//  PassThroughAlgorithm.java
 //  PassThroughRecipes
 //  
-//  Created by Philip Kuryloski on 2011-06-21.
+//  Created by Philip Kuryloski on 2011-07-11.
 //  Copyright 2011 University of California, Berkeley. All rights reserved.
 // 
 
@@ -14,9 +14,9 @@ import android.util.Log;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AccelerometerPassThroughAlgorithm implements WaveRecipeAlgorithm {
+public class PassThroughAlgorithm implements WaveRecipeAlgorithm {
     
-    private static final String TAG = AccelerometerPassThroughAlgorithm.class.getSimpleName();
+    private static final String TAG = PassThroughAlgorithm.class.getSimpleName();
     
     WaveRecipeAlgorithmListener theListener;
     
