@@ -19,20 +19,18 @@
     <granularity-table type="discreet">
         <entry>
             <!-- rates are assumed to be in Hz, precision is in meters-->
-            <input ref-id="input_location" rate="2" precision="1.0"/>
-            <output rate="2" precision="1.0" />
+            <input ref-id="input_location" rate="1" precision="1.0"/>
+            <output rate="1" precision="1.0" />
         </entry>
         <entry>
-            <input ref-id="input_location" rate="1" precision="2.0"/>
-            <output rate="1" precision="2.0" />
+            <!-- 1 minute interval -->
+            <input ref-id="input_location" rate="0.016666667" precision="10.0"/>
+            <output rate="0.016666667" precision="10.0" />
         </entry>
         <entry>
-            <input ref-id="input_location" rate="0.1" precision="50.0"/>
-            <output rate="0.1" precision="50.0" />
-        </entry>
-        <entry>
-            <input ref-id="input_location" rate="0.2" precision="100.0"/>
-            <output rate="0.1666667" precision="100.0" />
+            <!-- 5 minute interval -->
+            <input ref-id="input_location" rate="0.0033333333" precision="100.0"/>
+            <output rate="0.0033333333" precision="100.0" />
         </entry>
     </granularity-table>
     <algorithm>
