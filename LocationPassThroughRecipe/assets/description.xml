@@ -23,14 +23,24 @@
             <output rate="1" precision="1.0" />
         </entry>
         <entry>
-            <!-- 1 minute interval -->
-            <input ref-id="input_location" rate="0.016666667" precision="10.0"/>
-            <output rate="0.016666667" precision="10.0" />
+            <!-- 10 second interval -->
+            <input ref-id="input_location" rate="0.1" precision="50.0"/>
+            <output rate="0.1" precision="50.0" />
+        </entry>
+        <entry>
+            <!-- 30 second interval -->
+            <input ref-id="input_location" rate="0.033333333" precision="100.0"/>
+            <output rate="0.033333333" precision="100.0" />
+        </entry>
+        <entry>
+            <!-- 2 minute interval -->
+            <input ref-id="input_location" rate="0.0083333333" precision="250.0"/>
+            <output rate="0.0083333333" precision="250.0" />
         </entry>
         <entry>
             <!-- 5 minute interval -->
-            <input ref-id="input_location" rate="0.0033333333" precision="100.0"/>
-            <output rate="0.0033333333" precision="100.0" />
+            <input ref-id="input_location" rate="0.0033333333" precision="500.0"/>
+            <output rate="0.0033333333" precision="500.0" />
         </entry>
     </granularity-table>
     <algorithm>
