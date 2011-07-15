@@ -28,6 +28,11 @@
             <output rate="0.1" precision="50.0" />
         </entry>
         <entry>
+            <!-- 10 second interval -->
+            <input ref-id="input_location" rate="0.1" precision="100.0"/>
+            <output rate="0.1" precision="100.0" />
+        </entry>
+        <entry>
             <!-- 30 second interval -->
             <input ref-id="input_location" rate="0.033333333" precision="100.0"/>
             <output rate="0.033333333" precision="100.0" />
