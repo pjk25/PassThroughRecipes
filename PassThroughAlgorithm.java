@@ -20,6 +20,11 @@ public class PassThroughAlgorithm implements WaveRecipeAlgorithm {
     
     WaveRecipeAlgorithmListener theListener;
     
+    public void setAuthorizedMaxOutputRate(double maxOutputRate) {
+        // empty method as input and output rates are by definition equal in
+        // a pass through recipe
+    }
+    
     public boolean setWaveRecipeAlgorithmListener(Object listener) {
         try {
             theListener = new WaveRecipeAlgorithmListenerShadow(listener);
